@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267A7219E54440039BFEA /* ImgCollectionViewCell.swift */; };
 		DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E2219D5319005E52D8 /* AppDelegate.swift */; };
 		DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E4219D531A005E52D8 /* ViewController.swift */; };
 		DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E6219D531A005E52D8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA4267A7219E54440039BFEA /* ImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA8D37DF219D5319005E52D8 /* SlackLikePhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackLikePhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8D37E2219D5319005E52D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8D37E4219D531A005E52D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA4267A4219E54130039BFEA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DA4267A5219E541B0039BFEA /* ViewController */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		DA4267A5219E541B0039BFEA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA4267A7219E54440039BFEA /* ImgCollectionViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		DA8D37D6219D5319005E52D8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +72,7 @@
 		DA8D37E1219D5319005E52D8 /* SlackLikePhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				DA4267A4219E54130039BFEA /* Screen */,
 				DA8D37E2219D5319005E52D8 /* AppDelegate.swift */,
 				DA8D37E4219D531A005E52D8 /* ViewController.swift */,
 				DA8D37E6219D531A005E52D8 /* Main.storyboard */,
@@ -137,6 +156,7 @@
 			files = (
 				DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */,
 				DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */,
+				DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
