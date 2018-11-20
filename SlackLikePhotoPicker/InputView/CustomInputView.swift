@@ -8,6 +8,10 @@
 
 import UIKit
 
-class CustomInputView: CustomInputView {
+class CustomInputView: UINibView {
 
+    // 初期化後
+    override func afterInit() {
+//        nameLabel.text = "テスト"
+    }
 }

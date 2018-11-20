@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267A7219E54440039BFEA /* ImgCollectionViewCell.swift */; };
+		DA4267F121A299760039BFEA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267F021A299760039BFEA /* SecondViewController.swift */; };
+		DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267F221A29B520039BFEA /* CustomInputView.swift */; };
+		DA4267F521A29B5B0039BFEA /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4267F421A29B5B0039BFEA /* CustomInputView.xib */; };
+		DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267F721A2A3DA0039BFEA /* UINibView.swift */; };
 		DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E2219D5319005E52D8 /* AppDelegate.swift */; };
 		DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E4219D531A005E52D8 /* ViewController.swift */; };
 		DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E6219D531A005E52D8 /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		DA4267A7219E54440039BFEA /* ImgCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA4267F021A299760039BFEA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DA4267F221A29B520039BFEA /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		DA4267F421A29B5B0039BFEA /* CustomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
+		DA4267F721A2A3DA0039BFEA /* UINibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibView.swift; sourceTree = "<group>"; };
 		DA8D37DF219D5319005E52D8 /* SlackLikePhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackLikePhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8D37E2219D5319005E52D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8D37E4219D531A005E52D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +61,23 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		DA4267ED21A296B60039BFEA /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				DA4267F221A29B520039BFEA /* CustomInputView.swift */,
+				DA4267F421A29B5B0039BFEA /* CustomInputView.xib */,
+			);
+			path = InputView;
+			sourceTree = "<group>";
+		};
+		DA4267F621A2A3C80039BFEA /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DA4267F721A2A3DA0039BFEA /* UINibView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		DA8D37D6219D5319005E52D8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +97,8 @@
 		DA8D37E1219D5319005E52D8 /* SlackLikePhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				DA4267F621A2A3C80039BFEA /* General */,
+				DA4267ED21A296B60039BFEA /* InputView */,
 				DA4267A4219E54130039BFEA /* Screen */,
 				DA8D37E2219D5319005E52D8 /* AppDelegate.swift */,
 				DA8D37E4219D531A005E52D8 /* ViewController.swift */,
@@ -79,6 +106,7 @@
 				DA8D37E9219D531B005E52D8 /* Assets.xcassets */,
 				DA8D37EB219D531B005E52D8 /* LaunchScreen.storyboard */,
 				DA8D37EE219D531B005E52D8 /* Info.plist */,
+				DA4267F021A299760039BFEA /* SecondViewController.swift */,
 			);
 			path = SlackLikePhotoPicker;
 			sourceTree = "<group>";
@@ -143,6 +171,7 @@
 			files = (
 				DA8D37ED219D531B005E52D8 /* LaunchScreen.storyboard in Resources */,
 				DA8D37EA219D531B005E52D8 /* Assets.xcassets in Resources */,
+				DA4267F521A29B5B0039BFEA /* CustomInputView.xib in Resources */,
 				DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,8 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4267F121A299760039BFEA /* SecondViewController.swift in Sources */,
 				DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */,
 				DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */,
+				DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */,
+				DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */,
 				DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
