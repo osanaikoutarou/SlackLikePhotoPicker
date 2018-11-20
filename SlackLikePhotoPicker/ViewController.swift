@@ -25,14 +25,7 @@ class ViewController: UIViewController {
     }
     
     func getP() {
-        // 画像をすべて取得
-        let assets: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
-        assets.enumerateObjects { (phasset:PHAsset, index, stop:UnsafeMutablePointer<ObjCBool>) in
-            print("🙂")
-            print(phasset)
-            self.photoAssets.append(phasset)
-        }
-        print("🤔 \(self.photoAssets.count)")
+        self.photoAssets = AssetsAccessor.loadPHAssets()
     }
 
 }

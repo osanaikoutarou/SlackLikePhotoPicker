@@ -12,6 +12,10 @@
 		DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267F221A29B520039BFEA /* CustomInputView.swift */; };
 		DA4267F521A29B5B0039BFEA /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA4267F421A29B5B0039BFEA /* CustomInputView.xib */; };
 		DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267F721A2A3DA0039BFEA /* UINibView.swift */; };
+		DA4267FD21A3F9280039BFEA /* AssetsAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4267FC21A3F9280039BFEA /* AssetsAccessor.swift */; };
+		DA42680221A3FA5F0039BFEA /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42680021A3FA5F0039BFEA /* ImageCollectionViewCell.swift */; };
+		DA42680321A3FA5F0039BFEA /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA42680121A3FA5F0039BFEA /* ImageCollectionViewCell.xib */; };
+		DA42680621A3FBC30039BFEA /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA42680521A3FBC30039BFEA /* UIView+GestureRecognizer.swift */; };
 		DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E2219D5319005E52D8 /* AppDelegate.swift */; };
 		DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D37E4219D531A005E52D8 /* ViewController.swift */; };
 		DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E6219D531A005E52D8 /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 		DA4267F221A29B520039BFEA /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		DA4267F421A29B5B0039BFEA /* CustomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
 		DA4267F721A2A3DA0039BFEA /* UINibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibView.swift; sourceTree = "<group>"; };
+		DA4267FC21A3F9280039BFEA /* AssetsAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsAccessor.swift; sourceTree = "<group>"; };
+		DA42680021A3FA5F0039BFEA /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA42680121A3FA5F0039BFEA /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA42680521A3FBC30039BFEA /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
 		DA8D37DF219D5319005E52D8 /* SlackLikePhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackLikePhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8D37E2219D5319005E52D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8D37E4219D531A005E52D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,9 +81,29 @@
 		DA4267F621A2A3C80039BFEA /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DA42680421A3FB9B0039BFEA /* UIGestureRecognizer */,
+				DA4267FF21A3FA400039BFEA /* Cell */,
 				DA4267F721A2A3DA0039BFEA /* UINibView.swift */,
+				DA4267FC21A3F9280039BFEA /* AssetsAccessor.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		DA4267FF21A3FA400039BFEA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DA42680021A3FA5F0039BFEA /* ImageCollectionViewCell.swift */,
+				DA42680121A3FA5F0039BFEA /* ImageCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DA42680421A3FB9B0039BFEA /* UIGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				DA42680521A3FBC30039BFEA /* UIView+GestureRecognizer.swift */,
+			);
+			path = UIGestureRecognizer;
 			sourceTree = "<group>";
 		};
 		DA8D37D6219D5319005E52D8 = {
@@ -173,6 +201,7 @@
 				DA8D37EA219D531B005E52D8 /* Assets.xcassets in Resources */,
 				DA4267F521A29B5B0039BFEA /* CustomInputView.xib in Resources */,
 				DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */,
+				DA42680321A3FA5F0039BFEA /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA42680621A3FBC30039BFEA /* UIView+GestureRecognizer.swift in Sources */,
 				DA4267F121A299760039BFEA /* SecondViewController.swift in Sources */,
 				DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */,
+				DA42680221A3FA5F0039BFEA /* ImageCollectionViewCell.swift in Sources */,
 				DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */,
 				DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */,
+				DA4267FD21A3F9280039BFEA /* AssetsAccessor.swift in Sources */,
 				DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */,
 				DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */,
 			);
