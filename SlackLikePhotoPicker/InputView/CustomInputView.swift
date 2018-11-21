@@ -24,7 +24,7 @@ class CustomInputView: UINibView {
     }
 }
 
-extension CustomInputView:UICollectionViewDelegate,UICollectionViewDataSource {
+extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photoAssets.count
     }
@@ -33,7 +33,11 @@ extension CustomInputView:UICollectionViewDelegate,UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
         //        cell.imgView.image = getAssetThumbnail(asset: phasset)
-        cell.imageView.setImage(with: phasset, imgSize: CGSize(width: 300, height: 300))
+        cell.imageView.setImage(with: phasset, imgSize: CGSize(width: 250, height: 250))
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.height/2.0 - 2
+        return CGSize(width: width, height: width)
     }
 }

@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var targetImageView: UIImageView!
+    let kc = KeyboardController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,26 @@ class SecondViewController: UIViewController {
         textView.inputAccessoryView = v
         
         self.view.addTap(target: self, action: #selector(didTap))
+        
+        detectKeyboard()
     }
     
     @objc func didTap() {
         self.view.endEditing(true)
+    }
+    
+    func detectKeyboard() {
+        let textView = UITextView(frame: CGRect(x: 200, y: 200, width: 100, height: 21))
+        textView.backgroundColor = .red
+        kc.setup(targetView: textView)
+        view.addSubview(textView)
+        textView.becomeFirstResponder()
+//        textView.resignFirstResponder()
+//        textView.removeFromSuperview()
+        
+        if let kbSize = kc.kbSize {
+            print("\(kbSize)")
+        }
     }
 
 
