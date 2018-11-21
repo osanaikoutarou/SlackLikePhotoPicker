@@ -27,6 +27,7 @@
 		DA91A65321A5331900B7159F /* CustomInputCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */; };
 		DADD4ED721A5398300F343B5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4ED621A5398300F343B5 /* ButtonView.swift */; };
 		DADD4EDD21A5485A00F343B5 /* ImagePickerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */; };
+		DADD4EDF21A5509600F343B5 /* ImagePickerPhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4EDE21A5509600F343B5 /* ImagePickerPhotoLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputCollectionReusableView.xib; sourceTree = "<group>"; };
 		DADD4ED621A5398300F343B5 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCamera.swift; sourceTree = "<group>"; };
+		DADD4EDE21A5509600F343B5 /* ImagePickerPhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPhotoLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */,
+				DADD4EDE21A5509600F343B5 /* ImagePickerPhotoLibrary.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				DADD4ED721A5398300F343B5 /* ButtonView.swift in Sources */,
 				DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */,
 				DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */,
+				DADD4EDF21A5509600F343B5 /* ImagePickerPhotoLibrary.swift in Sources */,
 				DA91A65221A5331900B7159F /* CustomInputCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

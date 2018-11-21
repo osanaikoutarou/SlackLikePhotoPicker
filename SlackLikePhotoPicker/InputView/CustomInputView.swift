@@ -17,6 +17,7 @@ class CustomInputView: UINibView {
 
     var parentViewController:UIViewController?
     var imagePickerCamera = ImagePickerCamera()
+    var imagePickerPhotoLibrary = ImagePickerPhotoLibrary()
     
     func setup(parentViewController:UIViewController) {
         self.parentViewController = parentViewController
@@ -74,8 +75,17 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
                     })
                 }
             }
-            header.tappedAlbum {
-                print("tappedAlbum")
+            header.tappedAlbumAction = {
+                if let parentViewController = self.parentViewController {
+                    self.imagePickerPhotoLibrary.open(in: parentViewController, completion: { (image) in
+                        if let image = image {
+                            print("\(image)")
+                        }
+                        else {
+                            print("😎")
+                        }
+                    })
+                }
             }
             
             return header
