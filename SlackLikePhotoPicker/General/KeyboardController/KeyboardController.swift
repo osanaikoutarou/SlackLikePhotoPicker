@@ -22,7 +22,14 @@ class KeyboardController {
     
     var type:TargetViewType?
     var defaultInsets:UIEdgeInsets?
-    var kbSize:CGSize?
+    var kbSize:CGSize? {
+        didSet {
+            if let kbSizeDidSet = kbSizeDidSet {
+                kbSizeDidSet()
+            }
+        }
+    }
+    var kbSizeDidSet:(() -> Void)?
     
     var targetScrollView:UIScrollView?
     var targetTextView:UITextView?

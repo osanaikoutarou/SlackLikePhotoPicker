@@ -22,6 +22,7 @@
 		DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E6219D531A005E52D8 /* Main.storyboard */; };
 		DA8D37EA219D531B005E52D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E9219D531B005E52D8 /* Assets.xcassets */; };
 		DA8D37ED219D531B005E52D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37EB219D531B005E52D8 /* LaunchScreen.storyboard */; };
+		DA91A64D21A5107000B7159F /* KeyboardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91A64C21A5106F00B7159F /* KeyboardInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DA8D37E9219D531B005E52D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8D37EC219D531B005E52D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8D37EE219D531B005E52D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA91A64C21A5106F00B7159F /* KeyboardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				DA2A4BC721A50053004AB0D7 /* KeyboardController.swift */,
+				DA91A64C21A5106F00B7159F /* KeyboardInformation.swift */,
 			);
 			path = KeyboardController;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA42680621A3FBC30039BFEA /* UIView+GestureRecognizer.swift in Sources */,
+				DA91A64D21A5107000B7159F /* KeyboardInformation.swift in Sources */,
 				DA4267F121A299760039BFEA /* SecondViewController.swift in Sources */,
 				DA2A4BC821A50053004AB0D7 /* KeyboardController.swift in Sources */,
 				DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */,
