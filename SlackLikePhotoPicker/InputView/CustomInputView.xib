@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomInputView" customModule="SlackLikePhotoPicker" customModuleProvider="target">
             <connections>
+                <outlet property="bottomConstraint" destination="Y93-3J-jrC" id="dLe-aZ-2Xr"/>
                 <outlet property="collectionView" destination="bYb-j1-kOS" id="4ua-WY-1yD"/>
             </connections>
         </placeholder>
@@ -20,20 +21,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1l-3I-Pg6">
-                    <rect key="frame" x="10" y="10" width="370" height="565"/>
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="585"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-j1-kOS">
-                            <rect key="frame" x="0.0" y="0.0" width="370" height="565"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="585"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="g47-zg-Dck">
                                 <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="50" height="50"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.71428571429999999" blue="0.71428571429999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="bYb-j1-kOS" secondAttribute="bottom" id="S2I-pF-lUG"/>
                         <constraint firstItem="bYb-j1-kOS" firstAttribute="leading" secondItem="B1l-3I-Pg6" secondAttribute="leading" id="c3q-13-92h"/>
@@ -42,12 +43,12 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="B1l-3I-Pg6" secondAttribute="trailing" constant="10" id="BsH-ie-nJP"/>
-                <constraint firstItem="B1l-3I-Pg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Byp-RM-JSq"/>
-                <constraint firstAttribute="bottom" secondItem="B1l-3I-Pg6" secondAttribute="bottom" constant="10" id="Y93-3J-jrC"/>
-                <constraint firstItem="B1l-3I-Pg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="exN-bz-Yh6"/>
+                <constraint firstAttribute="trailing" secondItem="B1l-3I-Pg6" secondAttribute="trailing" id="BsH-ie-nJP"/>
+                <constraint firstItem="B1l-3I-Pg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Byp-RM-JSq"/>
+                <constraint firstAttribute="bottom" secondItem="B1l-3I-Pg6" secondAttribute="bottom" id="Y93-3J-jrC"/>
+                <constraint firstItem="B1l-3I-Pg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="exN-bz-Yh6"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="36" y="42"/>

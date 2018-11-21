@@ -16,11 +16,18 @@ class AssetsAccessor: NSObject {
     static func loadPHAssets() -> [PHAsset] {
         var photoAssets:[PHAsset] = []        
         // 画像をすべて取得
-        let assets: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: nil)
+        let assets: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: optionSortOrderCreateAt)
         assets.enumerateObjects { (phasset:PHAsset, index, stop:UnsafeMutablePointer<ObjCBool>) in
             photoAssets.append(phasset)
         }
         return photoAssets
+    }
+    
+    static var optionSortOrderCreateAt:PHFetchOptions {
+        let fetchOptions = PHFetchOptions()
+        let sortOrder = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        fetchOptions.sortDescriptors = sortOrder
+        return fetchOptions
     }
 
 }

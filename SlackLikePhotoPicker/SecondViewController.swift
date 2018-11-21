@@ -27,9 +27,7 @@ class SecondViewController: UIViewController {
         
         let v = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 50))
         v.backgroundColor = .red
-        //        textView.inputView = view
         let vv = CustomInputView.init(frame: CGRect(origin: .zero, size: KeyboardInformation.shared.kbSize))
-        //        textView.inputView = CustomInputView(frame: CGRect(x: 0, y: 0, width: 375, height: 200))
         textView.inputView = vv
         
         textView.inputAccessoryView = v

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomInputCollectionReusableView" id="U6b-Vx-4bR" customClass="CustomInputCollectionReusableView" customModule="SlackLikePhotoPicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FGS-ig-ePn">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="290"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXV-Es-tSm" customClass="ButtonView" customModule="SlackLikePhotoPicker" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="145"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_camera" translatesAutoresizingMaskIntoConstraints="NO" id="mf2-gG-tO7">
+                                    <rect key="frame" x="20" y="52.5" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="au8-63-LY1"/>
+                                        <constraint firstAttribute="width" constant="40" id="wS9-51-lKn"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="mf2-gG-tO7" firstAttribute="centerY" secondItem="QXV-Es-tSm" secondAttribute="centerY" id="ifb-dc-a65"/>
+                                <constraint firstItem="mf2-gG-tO7" firstAttribute="centerX" secondItem="QXV-Es-tSm" secondAttribute="centerX" id="lbu-3x-BUo"/>
+                            </constraints>
+                            <connections>
+                                <action selector="tappedCamera:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="iWZ-wa-bib"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bve-D8-P37" customClass="ButtonView" customModule="SlackLikePhotoPicker" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="145" width="80" height="145"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_9cells" translatesAutoresizingMaskIntoConstraints="NO" id="5nD-8k-PS0">
+                                    <rect key="frame" x="19.5" y="52.5" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="XPV-vi-OO0"/>
+                                        <constraint firstAttribute="width" constant="40" id="icc-5w-zP7"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="5nD-8k-PS0" firstAttribute="centerY" secondItem="bve-D8-P37" secondAttribute="centerY" id="Zmf-nt-1cw"/>
+                                <constraint firstItem="5nD-8k-PS0" firstAttribute="centerX" secondItem="bve-D8-P37" secondAttribute="centerX" id="vGc-Nw-2Td"/>
+                            </constraints>
+                            <connections>
+                                <action selector="tappedAlbum:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Bpt-Zh-qxZ"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="FGS-ig-ePn" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="GSN-dj-htN"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="FGS-ig-ePn" secondAttribute="bottom" id="PLO-Ea-vOy"/>
+                <constraint firstAttribute="trailing" secondItem="FGS-ig-ePn" secondAttribute="trailing" id="qfh-ou-dz0"/>
+                <constraint firstItem="FGS-ig-ePn" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="t1v-R7-bTa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="albumButton" destination="bve-D8-P37" id="D8d-by-h0q"/>
+                <outlet property="cameraButton" destination="QXV-Es-tSm" id="hlO-5j-qUM"/>
+            </connections>
+            <point key="canvasLocation" x="-81.5" y="170"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="icon_9cells" width="33" height="33"/>
+        <image name="icon_camera" width="33" height="33"/>
+    </resources>
+</document>

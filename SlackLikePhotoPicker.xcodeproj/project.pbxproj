@@ -23,6 +23,9 @@
 		DA8D37EA219D531B005E52D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37E9219D531B005E52D8 /* Assets.xcassets */; };
 		DA8D37ED219D531B005E52D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8D37EB219D531B005E52D8 /* LaunchScreen.storyboard */; };
 		DA91A64D21A5107000B7159F /* KeyboardInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91A64C21A5106F00B7159F /* KeyboardInformation.swift */; };
+		DA91A65221A5331900B7159F /* CustomInputCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91A65021A5331900B7159F /* CustomInputCollectionReusableView.swift */; };
+		DA91A65321A5331900B7159F /* CustomInputCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */; };
+		DADD4ED721A5398300F343B5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4ED621A5398300F343B5 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		DA8D37EC219D531B005E52D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8D37EE219D531B005E52D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA91A64C21A5106F00B7159F /* KeyboardInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInformation.swift; sourceTree = "<group>"; };
+		DA91A65021A5331900B7159F /* CustomInputCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputCollectionReusableView.swift; sourceTree = "<group>"; };
+		DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputCollectionReusableView.xib; sourceTree = "<group>"; };
+		DADD4ED621A5398300F343B5 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,8 @@
 			children = (
 				DA4267F221A29B520039BFEA /* CustomInputView.swift */,
 				DA4267F421A29B5B0039BFEA /* CustomInputView.xib */,
+				DA91A65021A5331900B7159F /* CustomInputCollectionReusableView.swift */,
+				DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */,
 			);
 			path = InputView;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		DA4267F621A2A3C80039BFEA /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DADD4ED521A5397500F343B5 /* ButtonView */,
 				DA2A4BC621A4FFD6004AB0D7 /* KeyboardController */,
 				DA42680421A3FB9B0039BFEA /* UIGestureRecognizer */,
 				DA4267FF21A3FA400039BFEA /* Cell */,
@@ -151,6 +160,14 @@
 				DA4267F021A299760039BFEA /* SecondViewController.swift */,
 			);
 			path = SlackLikePhotoPicker;
+			sourceTree = "<group>";
+		};
+		DADD4ED521A5397500F343B5 /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				DADD4ED621A5398300F343B5 /* ButtonView.swift */,
+			);
+			path = ButtonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +233,7 @@
 				DA4267F521A29B5B0039BFEA /* CustomInputView.xib in Resources */,
 				DA8D37E8219D531A005E52D8 /* Main.storyboard in Resources */,
 				DA42680321A3FA5F0039BFEA /* ImageCollectionViewCell.xib in Resources */,
+				DA91A65321A5331900B7159F /* CustomInputCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +253,10 @@
 				DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */,
 				DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */,
 				DA4267FD21A3F9280039BFEA /* AssetsAccessor.swift in Sources */,
+				DADD4ED721A5398300F343B5 /* ButtonView.swift in Sources */,
 				DA4267F821A2A3DA0039BFEA /* UINibView.swift in Sources */,
 				DA4267A8219E54440039BFEA /* ImgCollectionViewCell.swift in Sources */,
+				DA91A65221A5331900B7159F /* CustomInputCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

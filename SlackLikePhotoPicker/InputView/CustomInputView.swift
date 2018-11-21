@@ -13,14 +13,22 @@ class CustomInputView: UINibView {
     @IBOutlet weak var collectionView: UICollectionView!
     var photoAssets:[PHAsset] = []
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     // 初期化後
     override func afterInit() {
 //        nameLabel.text = "テスト"
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        collectionView.register(UINib(nibName: "CustomInputCollectionReusableView", bundle: nil),
+                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                withReuseIdentifier: "CustomInputCollectionReusableView")
         
         photoAssets = AssetsAccessor.loadPHAssets()
+        
+        bottomConstraint.constant = (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!
     }
 }
 
@@ -39,5 +47,24 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.height/2.0 - 2
         return CGSize(width: width, height: width)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 80, height: collectionView.bounds.height - 5)
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionElementKindSectionHeader {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CustomInputCollectionReusableView", for: indexPath) as! CustomInputCollectionReusableView
+            
+            header.tappedCameraAction = {
+                print("tappedCamera")
+            }
+            header.tappedAlbum {
+                print("tappedAlbum")
+            }
+            
+            return header
+        }
+        
+        return UICollectionReusableView()
     }
 }
