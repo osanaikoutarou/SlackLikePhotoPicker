@@ -26,6 +26,7 @@
 		DA91A65221A5331900B7159F /* CustomInputCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91A65021A5331900B7159F /* CustomInputCollectionReusableView.swift */; };
 		DA91A65321A5331900B7159F /* CustomInputCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */; };
 		DADD4ED721A5398300F343B5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4ED621A5398300F343B5 /* ButtonView.swift */; };
+		DADD4EDD21A5485A00F343B5 /* ImagePickerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DA91A65021A5331900B7159F /* CustomInputCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputCollectionReusableView.swift; sourceTree = "<group>"; };
 		DA91A65121A5331900B7159F /* CustomInputCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInputCollectionReusableView.xib; sourceTree = "<group>"; };
 		DADD4ED621A5398300F343B5 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		DA4267F621A2A3C80039BFEA /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DADD4EDB21A5484A00F343B5 /* ImagePicker */,
 				DADD4ED521A5397500F343B5 /* ButtonView */,
 				DA2A4BC621A4FFD6004AB0D7 /* KeyboardController */,
 				DA42680421A3FB9B0039BFEA /* UIGestureRecognizer */,
@@ -168,6 +171,14 @@
 				DADD4ED621A5398300F343B5 /* ButtonView.swift */,
 			);
 			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		DADD4EDB21A5484A00F343B5 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				DADD4EDC21A5485A00F343B5 /* ImagePickerCamera.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				DA2A4BC821A50053004AB0D7 /* KeyboardController.swift in Sources */,
 				DA8D37E5219D531A005E52D8 /* ViewController.swift in Sources */,
 				DA42680221A3FA5F0039BFEA /* ImageCollectionViewCell.swift in Sources */,
+				DADD4EDD21A5485A00F343B5 /* ImagePickerCamera.swift in Sources */,
 				DA8D37E3219D5319005E52D8 /* AppDelegate.swift in Sources */,
 				DA4267F321A29B520039BFEA /* CustomInputView.swift in Sources */,
 				DA4267FD21A3F9280039BFEA /* AssetsAccessor.swift in Sources */,

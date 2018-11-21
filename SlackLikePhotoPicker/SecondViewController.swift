@@ -30,6 +30,8 @@ class SecondViewController: UIViewController {
         let vv = CustomInputView.init(frame: CGRect(origin: .zero, size: KeyboardInformation.shared.kbSize))
         textView.inputView = vv
         
+        vv.setup(parentViewController: self)
+        
         textView.inputAccessoryView = v
 
     }

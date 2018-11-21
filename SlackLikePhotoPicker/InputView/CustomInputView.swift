@@ -10,10 +10,17 @@ import UIKit
 import Photos
 
 class CustomInputView: UINibView {
-    @IBOutlet weak var collectionView: UICollectionView!
     var photoAssets:[PHAsset] = []
-    
+
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
+    var parentViewController:UIViewController?
+    var imagePickerCamera = ImagePickerCamera()
+    
+    func setup(parentViewController:UIViewController) {
+        self.parentViewController = parentViewController
+    }
     
     // 初期化後
     override func afterInit() {
@@ -56,7 +63,16 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CustomInputCollectionReusableView", for: indexPath) as! CustomInputCollectionReusableView
             
             header.tappedCameraAction = {
-                print("tappedCamera")
+                if let parentViewController = self.parentViewController {
+                    self.imagePickerCamera.open(in: parentViewController, completion: { (image) in
+                        if let image = image {
+                            print("\(image)")
+                        }
+                        else {
+                            print("😎")
+                        }
+                    })
+                }
             }
             header.tappedAlbum {
                 print("tappedAlbum")
