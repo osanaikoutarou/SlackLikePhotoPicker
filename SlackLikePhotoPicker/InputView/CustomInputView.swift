@@ -18,9 +18,12 @@ class CustomInputView: UINibView {
     var parentViewController:UIViewController?
     var imagePickerCamera = ImagePickerCamera()
     var imagePickerPhotoLibrary = ImagePickerPhotoLibrary()
+    typealias DidSelectImage = ((_ image:UIImage) -> Void)
+    var didSelectImage:DidSelectImage?
     
-    func setup(parentViewController:UIViewController) {
+    func setup(parentViewController:UIViewController, didSelectImage:@escaping DidSelectImage) {
         self.parentViewController = parentViewController
+        self.didSelectImage = didSelectImage
     }
     
     // 初期化後
@@ -68,6 +71,9 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
                     self.imagePickerCamera.open(in: parentViewController, completion: { (image) in
                         if let image = image {
                             print("\(image)")
+                            if let didSelectImage = self.didSelectImage {
+                                didSelectImage(image)
+                            }
                         }
                         else {
                             print("😎")
@@ -77,9 +83,12 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
             }
             header.tappedAlbumAction = {
                 if let parentViewController = self.parentViewController {
-                    self.imagePickerPhotoLibrary.open(in: parentViewController, completion: { (image) in
+                    self.imagePickerPhotoLibrary.open(in: parentViewController, completion: { (image) in                        
                         if let image = image {
                             print("\(image)")
+                            if let didSelectImage = self.didSelectImage {
+                                didSelectImage(image)
+                            }
                         }
                         else {
                             print("😎")

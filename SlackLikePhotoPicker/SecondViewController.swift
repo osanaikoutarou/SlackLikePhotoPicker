@@ -30,7 +30,9 @@ class SecondViewController: UIViewController {
         let vv = CustomInputView.init(frame: CGRect(origin: .zero, size: KeyboardInformation.shared.kbSize))
         textView.inputView = vv
         
-        vv.setup(parentViewController: self)
+        vv.setup(parentViewController: self,didSelectImage: { image in
+            self.targetImageView.image = image
+        })
         
         textView.inputAccessoryView = v
 
