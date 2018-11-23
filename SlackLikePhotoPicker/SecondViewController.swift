@@ -16,15 +16,18 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.view.addTap(target: self, action: #selector(didTap))
     
         keyboardInformationSetup()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
+        print("⤵️")
+        print(KeyboardInformation.shared.kbSize)
+
         let v = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 50))
         v.backgroundColor = .red
         let vv = CustomInputView.init(frame: CGRect(origin: .zero, size: KeyboardInformation.shared.kbSize))
@@ -32,6 +35,7 @@ class SecondViewController: UIViewController {
         
         vv.setup(parentViewController: self,didSelectImage: { image in
             self.targetImageView.image = image
+            self.view.endEditing(true)
         })
         
         textView.inputAccessoryView = v

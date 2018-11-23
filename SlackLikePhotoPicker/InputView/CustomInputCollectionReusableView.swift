@@ -15,6 +15,7 @@ class CustomInputCollectionReusableView: UICollectionReusableView {
     
     var tappedCameraAction:(() -> Void)?
     var tappedAlbumAction:(() -> Void)?
+    var selectedImageAction:(() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()

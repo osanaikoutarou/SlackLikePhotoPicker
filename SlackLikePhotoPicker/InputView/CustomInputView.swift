@@ -28,7 +28,6 @@ class CustomInputView: UINibView {
     
     // 初期化後
     override func afterInit() {
-//        nameLabel.text = "テスト"
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil),
@@ -101,5 +100,14 @@ extension CustomInputView:UICollectionViewDelegateFlowLayout,UICollectionViewDat
         }
         
         return UICollectionReusableView()
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photoAsset = self.photoAssets[indexPath.item]
+
+        let image = photoAsset.createThumbnail(size: CGSize(width: 300, height: 300))
+
+        if let didSelectImage = self.didSelectImage {
+            didSelectImage(image)
+        }
     }
 }
